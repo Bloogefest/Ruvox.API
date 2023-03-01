@@ -1,0 +1,110 @@
+plugins {
+    id 'java'
+}
+
+group 'net.ruvox'
+version '1.0-SNAPSHOT'
+
+sourceSets {
+    authorization {
+        java {
+            srcDir 'src/authorization/java'
+        }
+        resources {
+            srcDir 'src/authorization/resources'
+        }
+    }
+    chat {
+        java {
+            srcDir 'src/chat/java'
+        }
+        resources {
+            srcDir 'src/chat/resources'
+        }
+    }
+    command {
+        java {
+            srcDir 'src/command/java'
+        }
+        resources {
+            srcDir 'src/command/resources'
+        }
+    }
+    common {
+        java {
+            srcDir 'src/common/java'
+        }
+        resources {
+            srcDir 'src/common/resources'
+        }
+    }
+    configuration {
+        java {
+            srcDir 'src/configuration/java'
+        }
+        resources {
+            srcDir 'src/configuration/resources'
+        }
+    }
+    event {
+        java {
+            srcDir 'src/event/java'
+        }
+        resources {
+            srcDir 'src/event/resources'
+        }
+    }
+    io {
+        java {
+            srcDir 'src/io/java'
+        }
+        resources {
+            srcDir 'src/io/resources'
+        }
+    }
+    logging {
+        java {
+            srcDir 'src/logging/java'
+        }
+        resources {
+            srcDir 'src/logging/resources'
+        }
+    }
+    network {
+        java {
+            srcDir 'src/network/java'
+        }
+        resources {
+            srcDir 'src/network/resources'
+        }
+    }
+    plugin {
+        java {
+            srcDir 'src/plugin/java'
+        }
+        resources {
+            srcDir 'src/plugin/resources'
+        }
+    }
+    world {
+        java {
+            srcDir 'src/world/java'
+        }
+        resources {
+            srcDir 'src/world/resources'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
